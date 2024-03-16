@@ -578,6 +578,7 @@ NAVIGATION STYLES
     border: 2px solid var(--dark-color-1);
     padding: var(--padding-1);
     border-radius: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .menu-icon i:hover,
@@ -601,6 +602,7 @@ NAVIGATION STYLES
 
 .dropdown-menu ul {
     padding: var(--padding-1);
+    opacity: 0;
 }
 
 .dropdown-menu li {
@@ -628,8 +630,32 @@ NAVIGATION STYLES
     color: var(--light-color-2);
 }
 
+.dropdown-menu.show ul {
+    animation: dropdown-menu-show-ul 0.3s ease 0.4s forwards;
+}
+
+@keyframes dropdown-menu-show-ul {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .dropdown-menu.show {
     display: block;
+    transform-origin: right;
+    animation: drop-menu-show 0.5s ease forwards;
+}
+
+@keyframes drop-menu-show {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 
 @media (min-width:768px) {
