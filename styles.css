@@ -906,20 +906,14 @@ FOOTER STYLING
     .footer-content .details {
         display: flex;
         text-align: left;
+        padding-left: var(--page-padding-200);
     }
 
     .footer-content .details > div {
+        box-sizing: border-box;
         flex: 1 0 50%;
         padding: 0;
         margin-bottom: var(--margin-4);
-    }
-
-    .details .social-media {
-        margin: 0 var(--page-padding-200);
-    }
-
-    .details .other-info {
-        margin: 0 var(--page-padding-200);
     }
 
 }
