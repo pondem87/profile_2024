@@ -129,7 +129,7 @@ BANNER STYLES
 
 .banner-wrapper {
     position: relative;
-    height: 70vh;
+    height: 74vh;
     overflow: hidden;
 }
 
@@ -673,7 +673,7 @@ BRIDGE MESSAGE SECTION
 
 .bridge-message-wrapper {
     margin: 0;
-    padding: var(--page-padding-300) var(--page-padding-500);
+    padding: var(--page-padding-500) var(--padding-2);
     background-color: var(--dark-color-1);
 }
 
@@ -718,6 +718,12 @@ BRIDGE MESSAGE SECTION
     font-size: var(--text-size-600);
 }
 
+@media (min-width: 768px) {
+    .bridge-message-wrapper {
+        padding: var(--page-padding-300) var(--page-padding-500);
+    }
+}
+
 
 /*
 
@@ -726,7 +732,7 @@ CARD SECTION STYLES
 */
 
 .card-slider-section {
-    padding: var(--page-padding-200) var(--page-padding-500);
+    padding: var(--page-padding-200) var(--padding-1);
     background-color: var(--light-color-2);
 }
 
@@ -847,17 +853,29 @@ CARD SECTION STYLES
 
 #card-slider-next {
     right: 0;
-    transform: translateX(100%);
 }
 
 #card-slider-prev {
     left: 0;
-    transform: translateX(-100%);
 }
 
 @media (min-width: 768px) {
+    .card-slider-section {
+        padding: var(--page-padding-200) var(--page-padding-500);
+    }
+
     .card-flex-container {
         flex: 1 0 50%;
+    }
+
+    #card-slider-next {
+        right: 0;
+        transform: translateX(100%);
+    }
+    
+    #card-slider-prev {
+        left: 0;
+        transform: translateX(-100%);
     }
 }
 
